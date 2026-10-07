@@ -28,7 +28,7 @@
       <p class="updated">更新日：2026年10月7日</p>
       <section>
         <h2>1. 対象と運営者</h2>
-        <p>Crossroad Store Japanが管理するCrossroad eBay APIは、許可された利用者が自身のeBay出品を検索・照合し、依頼した出品を終了するための専用ツールです。このポリシーは、このツールでの情報の取り扱いを説明します。</p>
+        <p>Crossroad Store Japanが管理するCrossroad eBay APIは、許可された利用者が自身のeBay出品を検索・照合し、商品写真と説明を下書きにまとめて確認後に新規出品し、依頼した出品を終了するための専用ツールです。このポリシーは、このツールでの情報の取り扱いを説明します。</p>
       </section>
       <section>
         <h2>2. 取り扱う情報</h2>
@@ -36,6 +36,7 @@
           <li>接続設定：eBayのApp ID、Client Secret、RuName、接続先環境。</li>
           <li>認証情報：OAuthの認証トークン、接続先eBayユーザー名、認証手続きのための一時情報。</li>
           <li>出品情報：Item ID、SKU、商品名、写真URL、出品状態など、検索・照合と終了確認に必要な情報。</li>
+          <li>新規出品の下書き：商品メモ、タイトル、説明、SKU、価格、商品仕様、配送・返品のひな型、公開前チェックの結果。アップロードした商品写真の原本と編集版。</li>
           <li>処理履歴：出品終了前の確認内容、終了要求の状態・結果・日時。</li>
           <li>アクセスの分離に使用するChatGPTの利用者識別子。</li>
         </ul>
@@ -43,7 +44,7 @@
       </section>
       <section>
         <h2>3. 利用目的と情報の送信先</h2>
-        <p>情報は、eBay公式APIへの認証、出品の検索・照合・終了、結果確認のために使用します。認証情報は必要なeBay公式APIに送信します。Client Secretと認証トークンをブラウザー画面やChatGPTのツール結果に返すことはありません。</p>
+        <p>情報は、eBay公式APIへの認証、出品の検索・照合・新規作成・終了、写真の保管・転送、結果確認のために使用します。認証情報は必要なeBay公式APIに送信します。Client Secretと認証トークンをブラウザー画面やChatGPTのツール結果に返すことはありません。</p>
         <p>利用者がChatGPTからこのツールを呼び出した場合、必要な出品情報と処理結果をChatGPTに返します。このアプリは情報を販売せず、広告目的で利用しません。</p>
       </section>
       <section>
@@ -53,6 +54,7 @@
       </section>
       <section>
         <h2>5. 削除と接続の解除</h2>
+        <p>写真編集は端末内で行い、保存操作により編集版をアップロードします。公開前チェックでは選択した写真をeBay Picture Servicesへ転送します。原本・編集版と商品下書きは利用者が削除するまで保管し、各下書きの削除操作で消去できます。「接続情報を削除」では商品下書きと写真は残ります。eBayへ転送済みの写真・公開済み出品にはeBay側の保存方針が適用されます。</p>
         <p>アプリの設定画面にある「接続情報を削除」から、保存した接続情報、認証待ち情報、処理履歴を削除できます。この操作はeBay側で付与したアプリの許可を取り消すものではありません。eBay側の許可を取り消す場合は、eBayのアカウント設定で操作してください。</p>
       </section>
       <section>
@@ -64,11 +66,12 @@
       <h2 class="title">Privacy Policy</h2>
       <p class="updated">Crossroad eBay API · Updated October 7, 2026</p>
       <h3>Scope and operator</h3>
-      <p>Crossroad Store Japan operates this private tool for authorized users to find, verify and end their own eBay listings.</p>
+      <p>Crossroad Store Japan operates this private tool for authorized users to prepare product photos and listing drafts, create listings after review, and find, verify and end their own eBay listings.</p>
       <h3>Information we handle</h3>
       <p>The tool handles eBay application settings (App ID, Client Secret, RuName and environment), OAuth tokens, the connected eBay username, temporary authorization information, and the ChatGPT user identifier used to separate access. It retrieves listing information needed for verification, including item IDs, SKUs, titles, image URLs and listing status. It stores listing-ending confirmation details, results and timestamps. Buyer names, addresses and phone numbers are not part of the information the application stores.</p>
+      <p>The tool also stores product notes, listing drafts, original and edited product photos, publication checks and results. Photo edits run on the device, with edited copies uploaded when saved. Selected photos are sent to eBay Picture Services during pre-publication checks. Drafts and original/edited photos remain until deleted using the draft deletion control; deleting connection credentials does not delete them. Photos transferred to eBay and published listings follow eBay retention policies.</p>
       <h3>Purpose and sharing</h3>
-      <p>Information is used to authenticate with official eBay APIs, find and verify listings, end requested listings and check the results. Required credentials are sent to official eBay APIs. Client Secrets and tokens are not returned to browser screens or ChatGPT tool results. When a user invokes the tool through ChatGPT, necessary listing information and operation results are returned to ChatGPT. The application does not sell information or use it for advertising.</p>
+      <p>Information is used to authenticate with official eBay APIs, find and verify listings, create reviewed listings, transfer listing photos, end requested listings and check the results. Required credentials are sent to official eBay APIs. Client Secrets and tokens are not returned to browser screens or ChatGPT tool results. When a user invokes the tool through ChatGPT, necessary listing information and operation results are returned to ChatGPT. The application does not sell information or use it for advertising.</p>
       <h3>Storage and deletion</h3>
       <p>Connection information and operation history are stored in application storage on ChatGPT Sites with access separated by user. Client Secrets and tokens are encrypted on the server. The management application is restricted to authorized users. Pending authorizations expire after ten minutes. Saved connection information and operation history are retained until deleted by the user.</p>
       <p>Users can delete saved credentials, pending authorizations and operation history with the application's “接続情報を削除” (Delete connection information) control. This does not revoke permission on eBay; that permission can be revoked in the user's eBay account settings. The respective privacy terms of eBay and ChatGPT Sites also apply to information processed by their platforms.</p>
